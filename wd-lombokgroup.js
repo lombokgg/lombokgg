@@ -1,79 +1,3 @@
-<!-- Start Notif WD -->
-<style>
-    .popup {
-        position: relative;
-        cursor: pointer;
-    }
-
-    .popup .popuptext {
-        visibility: hidden;
-        width: 350px;
-        background-color: #FFD700;
-        color: black;
-        text-align: center;
-        border-radius: 10px;
-        padding: 4px 0;
-        position: fixed;
-        z-index: 9999;
-        top: 50px;
-        left: 100px;
-        margin-left: -80px;
-        font-family: Poppins;
-        font-size: 14px;
-        opacity: 0;
-        transition: visibility 0s 1.5s, opacity 1.5s linear;
-    }
-
-    .popup .show {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 1.5s linear;
-    }
-
-    .medium-bold {
-        font-weight: 600;
-    }
-
-    #imageid {
-        float: left;
-        width: 15%;
-        height: auto;
-        margin-left: 10px;
-        margin-right: 0px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    #winner-title {
-        height: auto;
-        margin-top: 5px;
-        margin-bottom: 0px;
-    }
-
-    #winner-info {
-        height: auto;
-        margin-top: 4px;
-        margin-bottom: 0px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .popup .popuptext {
-            margin: unset;
-            top: 90px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-</style>
-
-<div class="popup">
-    <div class="popuptext" id="myPopup">
-        <img id="imageid">
-        <div id="winner-title"><strong>PENARIKAN DANA</strong></div>
-        <div id="winner-info"></div>
-    </div>
-</div>
-
 <script>
     var bankLogos = [
         "https://i.ibb.co/6FQwCDb/logo-bca.png", 
@@ -86,7 +10,6 @@
         "https://i.ibb.co/Mc1svpB/logo-ovo.png"
     ];
 
-    // Fungsi untuk preload gambar
     function preloadImages(images) {
         images.forEach(function(src) {
             const img = new Image();
@@ -152,7 +75,7 @@
         var ee = d[dd];
         var z = getRandomInt(3, 6);
         var user = rizz(1) + aura(1) + stopthecap(z) + ongod(1);
-        
+
         document.getElementById("winner-info").innerHTML = user + " telah melakukan withdraw sebesar <span class='medium-bold'>" + xx + "</span>";
         document.getElementById("imageid").src = ee;
 
@@ -175,4 +98,3 @@
         }, 3000);
     };
 </script>
-<!-- End Notif WD -->
